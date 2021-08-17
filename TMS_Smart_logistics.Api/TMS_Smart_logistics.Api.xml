@@ -9,6 +9,51 @@
             部门
             </summary>
         </member>
+        <member name="F:TMS_Smart_logistics.Api.Controllers.DepartmentController.department">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TMS_Smart_logistics.Api.Controllers.DepartmentController.roleModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.#ctor(TMS_Smart_logistics.IRepository.IDepartmentModel,TMS_Smart_logistics.IRepository.IRoleModel)">
+            <summary>
+            依赖注入
+            </summary>
+            <param name="_department"></param>
+            <param name="_roleModel"></param>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.Show(System.String)">
+            <summary>
+            显示部门
+            </summary>
+            <param name="DeparName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.AddDepar(TMS_Smart_logistics.Model.DepartmentModel)">
+            <summary>
+            添加部门
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.DelDepar(System.Int32)">
+            <summary>
+            删除部门
+            </summary>
+            <param name="DeparMentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.FanDeparMent(System.Int32)">
+            <summary>
+            反填
+            </summary>
+            <param name="DeparMentID"></param>
+            <returns></returns>
+        </member>
         <member name="T:TMS_Smart_logistics.Api.Controllers.LoginController">
             <summary>
             登录
