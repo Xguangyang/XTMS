@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NPOI" Version="2.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TMS_Smart_logistics.Common\TMS_Smart_logistics.Common.csproj" />
+    <ProjectReference Include="..\TMS_Smart_logistics.Model\TMS_Smart_logistics.Model.csproj" />
+  </ItemGroup>
+
+</Project>

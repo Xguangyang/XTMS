@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TMS_Smart_logistics.Api</name>
+    </assembly>
+    <members>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.DepartmentController">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.LoginController">
+            <summary>
+            登录
+            </summary>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.PositionController">
+            <summary>
+            车辆管理
+            </summary>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.RegistrationController">
+            <summary>
+            车辆管理
+            </summary>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.RoleController">
+            <summary>
+            角色
+            </summary>
+        </member>
+    </members>
+</doc>

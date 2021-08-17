@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TMS_Smart_logistics.Common\TMS_Smart_logistics.Common.csproj" />
+    <ProjectReference Include="..\TMS_Smart_logistics.IRepository\TMS_Smart_logistics.IRepository.csproj" />
+    <ProjectReference Include="..\TMS_Smart_logistics.Model\TMS_Smart_logistics.Model.csproj" />
+  </ItemGroup>
+
+</Project>
