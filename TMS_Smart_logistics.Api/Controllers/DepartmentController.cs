@@ -14,34 +14,63 @@ namespace TMS_Smart_logistics.Api.Controllers
     [Route("api/[controller]/[action]")]
     public class DepartmentController : Controller
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public IDepartmentModel department;
+        /// <summary>
+        /// 
+        /// </summary>
         public IRoleModel roleModel;
+        /// <summary>
+        /// 依赖注入
+        /// </summary>
+        /// <param name="_department"></param>
+        /// <param name="_roleModel"></param>
         public DepartmentController(IDepartmentModel _department, IRoleModel _roleModel)
         {
             department = _department;
             roleModel = _roleModel;
         }
-        //显示部门
+
+        /// <summary>
+        /// 显示部门
+        /// </summary>
+        /// <param name="DeparName"></param>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Show(string DeparName="")
         {
             return Ok(department.GetDepartment(DeparName));
         }
+        /// <summary>
+        /// 添加部门
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         [HttpPost]
-        //添加部门
+        
         public IActionResult AddDepar(Model.DepartmentModel obj)
         {
             return Ok(department.AddDeparMent(obj));
         }
+        /// <summary>
+        /// 删除部门
+        /// </summary>
+        /// <param name="DeparMentID"></param>
+        /// <returns></returns>
         [HttpPost]
-        //删除部门
         public IActionResult DelDepar(int DeparMentID)
         {
             return Ok(department.DelDeparMent(DeparMentID));
         }
-        
-        
-        //反填
+
+
+        /// <summary>
+        /// 反填
+        /// </summary>
+        /// <param name="DeparMentID"></param>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult FanDeparMent(int DeparMentID)
         {
