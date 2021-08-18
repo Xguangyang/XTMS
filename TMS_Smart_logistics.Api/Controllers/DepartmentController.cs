@@ -5,32 +5,33 @@ using System.Linq;
 using System.Threading.Tasks;
 using TMS_Smart_logistics.Model;
 using TMS_Smart_logistics.IRepository;
+using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TMS_Smart_logistics.Api.Controllers
 {
+
     /// <summary>
     /// 部门
     /// </summary>
+    [Authorize]
     [Route("api/[controller]/[action]")]
+
     public class DepartmentController : Controller
     {
         /// <summary>
         /// 
         /// </summary>
+
         public IDepartmentModel department;
-        /// <summary>
-        /// 
-        /// </summary>
-        public IRoleModel roleModel;
         /// <summary>
         /// 依赖注入
         /// </summary>
         /// <param name="_department"></param>
-        /// <param name="_roleModel"></param>
-        public DepartmentController(IDepartmentModel _department, IRoleModel _roleModel)
+        public DepartmentController(IDepartmentModel _department)
         {
             department = _department;
-            roleModel = _roleModel;
+          
         }
 
         /// <summary>
@@ -44,7 +45,7 @@ namespace TMS_Smart_logistics.Api.Controllers
             return Ok(department.GetDepartment(DeparName));
         }
         /// <summary>
-        /// 添加部门
+        /// 添加部门0
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -55,7 +56,7 @@ namespace TMS_Smart_logistics.Api.Controllers
             return Ok(department.AddDeparMent(obj));
         }
         /// <summary>
-        /// 删除部门
+        /// 删除部门1
         /// </summary>
         /// <param name="DeparMentID"></param>
         /// <returns></returns>
@@ -67,7 +68,7 @@ namespace TMS_Smart_logistics.Api.Controllers
 
 
         /// <summary>
-        /// 反填
+        /// 反填0
         /// </summary>
         /// <param name="DeparMentID"></param>
         /// <returns></returns>

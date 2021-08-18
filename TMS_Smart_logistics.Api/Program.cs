@@ -22,8 +22,13 @@ namespace TMS_Smart_logistics.Api
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
-                }).ConfigureLogging(a => a.ClearProviders()).UseNLog().UseServiceProviderFactory(new AutofacServiceProviderFactory());
+                    webBuilder.UseStartup<Startup>().UseNLog();
+                }).ConfigureLogging(a => a.ClearProviders()).UseNLog().UseServiceProviderFactory(new AutofacServiceProviderFactory()).ConfigureLogging(logging=> {
+                    //清楚原有的日志器
+                    logging.ClearProviders();
+                });
+                   
+        
 
     }
 }

@@ -4,6 +4,106 @@
         <name>TMS_Smart_logistics.Api</name>
     </assembly>
     <members>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.AidRecipientsController">
+            <summary>
+            物资领用管理
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.AidRecipientsController.GetAidRecipients">
+            <summary>
+            显示物资领用1
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.AidRecipientsController.AddAidRecipients(TMS_Smart_logistics.Model.ViewAidRecipients)">
+            <summary>
+            添加物资领用0
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.AidRecipientsController.DelAidRecipients(TMS_Smart_logistics.Model.ViewAidRecipients)">
+            <summary>
+            删除物资领用0
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.AidRecipientsController.UpdAidRecipients(TMS_Smart_logistics.Model.ViewAidRecipients)">
+            <summary>
+            修改物资领用0
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.ChargeController">
+            <summary>
+            应收显示
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ChargeController.GetCharge">
+            <summary>
+            显示 应收
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ChargeController.DelCharge(System.String)">
+            <summary>
+            应收 删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ChargeController.AddCharge(TMS_Smart_logistics.Model.Charge)">
+            <summary>
+            应收添加
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ChargeController.UpdCharge(TMS_Smart_logistics.Model.Charge)">
+            <summary>
+            应收修改
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.ConsignorController">
+            <summary>
+            货主管理
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ConsignorController.#ctor(TMS_Smart_logistics.IRepository.IConsignor,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            依赖注入
+            </summary>
+            <param name="_consignor"></param>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ConsignorController.GetConsignor(System.String,System.String,System.String)">
+            <summary>
+            货主管理
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ConsignorController.AddConsignor(TMS_Smart_logistics.Model.ViewConsignor)">
+            <summary>
+            货主管理添加0
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ConsignorController.DelConsignor(System.String)">
+            <summary>
+            货主管理删除0
+            </summary>
+            <param name="ConsignorID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ConsignorController.UpdConsignor">
+            <summary>
+            货主管理修改0
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:TMS_Smart_logistics.Api.Controllers.DepartmentController">
             <summary>
             部门
@@ -14,17 +114,11 @@
             
             </summary>
         </member>
-        <member name="F:TMS_Smart_logistics.Api.Controllers.DepartmentController.roleModel">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.#ctor(TMS_Smart_logistics.IRepository.IDepartmentModel,TMS_Smart_logistics.IRepository.IRoleModel)">
+        <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.#ctor(TMS_Smart_logistics.IRepository.IDepartmentModel)">
             <summary>
             依赖注入
             </summary>
             <param name="_department"></param>
-            <param name="_roleModel"></param>
         </member>
         <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.Show(System.String)">
             <summary>
@@ -35,23 +129,68 @@
         </member>
         <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.AddDepar(TMS_Smart_logistics.Model.DepartmentModel)">
             <summary>
-            添加部门
+            添加部门0
             </summary>
             <param name="obj"></param>
             <returns></returns>
         </member>
         <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.DelDepar(System.Int32)">
             <summary>
-            删除部门
+            删除部门1
             </summary>
             <param name="DeparMentID"></param>
             <returns></returns>
         </member>
         <member name="M:TMS_Smart_logistics.Api.Controllers.DepartmentController.FanDeparMent(System.Int32)">
             <summary>
-            反填
+            反填0
             </summary>
             <param name="DeparMentID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.GoodsAndMaterialsController">
+            <summary>
+            物资采购管理
+            </summary>
+        </member>
+        <member name="F:TMS_Smart_logistics.Api.Controllers.GoodsAndMaterialsController.goodsAndMaterials">
+            <summary>
+            依赖注入
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.GoodsAndMaterialsController.#ctor(TMS_Smart_logistics.IRepository.IGoodsAndMaterials)">
+            <summary>
+            依赖注入
+            </summary>
+            <param name="_goodsAndMaterials"></param>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.GoodsAndMaterialsController.GetGoodAndMaterials(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            物资采购显示 
+            </summary>
+            <param name="GoodsAndMaterialsName">货物名字</param>
+            <param name="TextureName">输入材质</param>
+            <param name="PlaceOfOrigin">产地</param>
+            <param name="Proposer">申请人</param>
+            <param name="ExamineName">审批状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.GoodsAndMaterialsController.AddGoodsAndMaterials">
+            <summary>
+            物资采购添加 0
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.GoodsAndMaterialsController.DelGoodsAndMaterials">
+            <summary>
+            物资采购删除0
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.GoodsAndMaterialsController.UpdGoodsAndMaterials">
+            <summary>
+            物资采购 修改0
+            </summary>
             <returns></returns>
         </member>
         <member name="T:TMS_Smart_logistics.Api.Controllers.LoginController">
@@ -59,20 +198,198 @@
             登录
             </summary>
         </member>
+        <member name="F:TMS_Smart_logistics.Api.Controllers.LoginController.login">
+            <summary>
+            登录I
+            </summary>
+        </member>
+        <member name="F:TMS_Smart_logistics.Api.Controllers.LoginController.logger">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.LoginController.#ctor(TMS_Smart_logistics.IRepository.ILogin,Microsoft.Extensions.Logging.ILogger{TMS_Smart_logistics.Api.Controllers.LoginController},TMS_Smart_logistics.Common.JWTService)">
+            <summary>
+            依赖注入
+            </summary>
+            <param name="_login"></param>
+            <param name="_logger"></param>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.LoginController.Login(System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="UserName"></param>
+            <param name="UserPasd"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.PayAController">
+            <summary>
+            应付
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.PayAController.GetPay">
+            <summary>
+            应付显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.PayAController.AddPay(TMS_Smart_logistics.Model.PayAdministration)">
+            <summary>
+            添加应付
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.PayAController.DelPays(System.String)">
+            <summary>
+            应付 删除
+            </summary>
+            <param name="PayAdministrationID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.PayAController.UpdPays(TMS_Smart_logistics.Model.PayAdministration)">
+            <summary>
+            修改 应付
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
         <member name="T:TMS_Smart_logistics.Api.Controllers.PositionController">
             <summary>
-            车辆管理
+            职位管理
             </summary>
+        </member>
+        <member name="F:TMS_Smart_logistics.Api.Controllers.PositionController.position">
+            <summary>
+            依赖注入
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.PositionController.#ctor(TMS_Smart_logistics.IRepository.IPositionModel)">
+            <summary>
+            依赖注入
+            </summary>
+            <param name="_position"></param>
+            <param name="_logger"></param>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.PositionController.GetPosition(System.String)">
+            <summary>
+            显示职位
+            </summary>
+            <param name="PositionName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.ReceiptsController">
+            <summary>
+            进项发票
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ReceiptsController.GetPay">
+            <summary>
+            进项发票 显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ReceiptsController.AddPay(TMS_Smart_logistics.Model.ReceiptsNvoice)">
+            <summary>
+            进项发票
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ReceiptsController.DelPays(System.Int32)">
+            <summary>
+            进项发票 删除
+            </summary>
+            <param name="PayAdministrationID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ReceiptsController.UpdPays(TMS_Smart_logistics.Model.ReceiptsNvoice)">
+            <summary>
+            进项发票 修改
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
         </member>
         <member name="T:TMS_Smart_logistics.Api.Controllers.RegistrationController">
             <summary>
             车辆管理
             </summary>
         </member>
+        <member name="F:TMS_Smart_logistics.Api.Controllers.RegistrationController.registration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.RegistrationController.#ctor(TMS_Smart_logistics.IRepository.IRegistrationModel)">
+            <summary>
+            
+            </summary>
+            <param name="_registration"></param>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.RegistrationController.GetRegistration(System.String,System.String,System.String,System.String)">
+            <summary>
+            车辆管理显示
+            </summary>
+            <param name="FactoryPlateModel">车厂型号</param>
+            <param name="LicensePlateNumber">车牌号</param>
+            <param name="LicensePlateName">司机姓名</param>
+            <param name="SubordinateCompanies">所属公司</param>
+            <returns></returns>
+        </member>
         <member name="T:TMS_Smart_logistics.Api.Controllers.RoleController">
             <summary>
             角色
             </summary>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.StorageController">
+            <summary>
+            入库管理
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.StorageController.GetStorage">
+            <summary>
+            入库管理显示
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TMS_Smart_logistics.Api.Controllers.ViewLineController">
+            <summary>
+            线路
+            </summary>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ViewLineController.GetLine(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            显示1
+            </summary>
+            <param name="CircuitName"></param>
+            <param name="CircuitStartPlace"></param>
+            <param name="CircuitEndPlace"></param>
+            <param name="IsOutsource"></param>
+            <param name="EmployeeName"></param>
+            <param name="OutsourcingUnitName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ViewLineController.AddLine(TMS_Smart_logistics.Model.VIewLine)">
+            <summary>
+            添加0
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ViewLineController.DelLine(System.String)">
+            <summary>
+            删除0
+            </summary>
+            <param name="CircuitAdministrationID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TMS_Smart_logistics.Api.Controllers.ViewLineController.UpdLine(TMS_Smart_logistics.Model.VIewLine)">
+            <summary>
+            修改0
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

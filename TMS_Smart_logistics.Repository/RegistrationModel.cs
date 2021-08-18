@@ -9,6 +9,7 @@ using Dapper;
 
 namespace TMS_Smart_logistics.Repository
 {
+    
     public class RegistrationModel : Base<Model.RegistrationModel>, IRegistrationModel
     {
         public List<Model.RegistrationModel> GetRegistrations(string FactoryPlateModel, string LicensePlateNumber, string LicensePlateName, string SubordinateCompanies)

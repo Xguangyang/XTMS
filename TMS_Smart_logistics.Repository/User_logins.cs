@@ -9,7 +9,7 @@ using Dapper;
 
 namespace TMS_Smart_logistics.Repository
 {
-    public class User_login : Base<UserModel>, ILogin
+    public class User_logins : Base<UserModel>, ILogin
     {
         public List<UserModel> Logins(string UserName, string UserPwd)
         {
